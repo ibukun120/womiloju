@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, ExternalLink } from "lucide-react";
 
@@ -51,9 +52,10 @@ export default function Hero() {
         }}
       />
 
-      <div style={{ maxWidth: 860, width: "100%", textAlign: "center", position: "relative", zIndex: 1 }}>
-        {/* Status badge */}
-        <motion.div
+      <div className="hero-layout" style={{ maxWidth: 1100, width: "100%", position: "relative", zIndex: 1 }}>
+        <div className="hero-copy">
+          {/* Status badge */}
+          <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -179,7 +181,6 @@ export default function Hero() {
             >
               <div
                 style={{
-                 
                   fontSize: "clamp(28px, 4vw, 40px)",
                   fontWeight: 800,
                   color: "var(--accent)",
@@ -203,6 +204,25 @@ export default function Hero() {
           ))}
         </motion.div>
       </div>
+
+      <motion.div
+        className="hero-figure"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+      >
+        <Image
+          src="/images/womiloju.jpeg"
+          alt="Womiloju Hezekiah Ibukunoluwa"
+          // width={100}
+          // height={100}
+          // className="w-full h-full"
+          fill
+          sizes="(max-width: 868px) 80vw, 420px"
+          style={{ objectFit: "contain" }}
+        />
+      </motion.div>
+    </div>
 
       {/* Scroll indicator */}
       <motion.div
