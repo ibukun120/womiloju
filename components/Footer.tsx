@@ -43,9 +43,10 @@ export default function Footer() {
             gap: 6,
           }}
         >
-          Built with{" "}
+          {/* Built with{" "}
           <Heart size={12} fill="var(--accent)" style={{ color: "var(--accent)" }} />{" "}
-          by Hezekiah Womiloju · {new Date().getFullYear()}
+          by  */}
+          Hezekiah Womiloju · {new Date().getFullYear()}
         </p>
 
         <p style={{ fontSize: 13, color: "var(--text-muted)" }}>

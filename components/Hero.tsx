@@ -219,7 +219,7 @@ export default function Hero() {
           // className="w-full h-full"
           fill
           sizes="(max-width: 868px) 80vw, 420px"
-          style={{ objectFit: "contain" }}
+          style={{ objectFit: "cover" }}
         />
       </motion.div>
     </div>
